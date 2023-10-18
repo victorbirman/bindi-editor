@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const subtitleInput = document.getElementById("subtitle");
   const editor = document.getElementById("editor");
   const preview = document.getElementById("preview");
-
+  const categoryInput = document.getElementById("category");
   // Function to convert Markdown to HTML
   function convertMarkdownToHtml() {
     const title = titleInput.value;
@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     let sanitizedTitle = titleInput.value.trim();
+    const category = categoryInput.value;
 
     // Replace accented vowels in the title
     for (const [accentedVowel, unaccentedVowel] of Object.entries(accentMap)) {
@@ -98,7 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
       title: titleInput.value,
       subtitle: subtitleInput.value,
       cover: `${dashedTitle}.jpg`,
-      link: `${dashedTitle}.html`, // Include the Markdown content in the JSON file
+      href: `${dashedTitle}.html`,
+      category: category, // Include the Markdown content in the JSON file
     };
 
     const blobJson = new Blob([JSON.stringify(jsonData, null, 2)], {
