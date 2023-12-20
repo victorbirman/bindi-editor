@@ -64,16 +64,57 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const htmlHeader = `
     <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="favicon.png" />
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <title>${titleInput.value}</title>
 
-        <title>${titleInput.value}</title>
-        <link rel="stylesheet" href="style-articles.css" />
-      </head>
-      <body>
+    <link rel="stylesheet" href="style-articles.css" />
+    <link rel="stylesheet" href="../style-hamburger.css" />
+
+    <script src="../hamburgerMenu.js" defer></script>
+    <script src="scriptArticles.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html"
+        ><img class="logo" src="../icons/bindi_logo.png" alt="Bindi"
+      /></a>
+      <ul class="top-menu">
+        <li>
+          <a href="../contenido/quienes-somos.html">Qui&eacute;nes somos</a>
+        </li>
+        <li>
+          <a href="../noticias.html">Noticias</a>
+        </li>
+        <li>
+          <a href="../videos.html">Videos</a>
+        </li>
+        <li><a href="mailto:world.bindi@gmail.com">Contacto</a></li>
+      </ul>
+      <button class="radio">&#9654; EN VIVO</button>
+      <div class="hamburger" onclick="toggleHamburgerMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="hamburger-menu">
+          <ul>
+            <li>
+              <a href="../contenido/quienes-somos.html">Qui&eacute;nes somos</a>
+            </li>
+            <li>
+              <a href="../noticias.html">Noticias</a>
+            </li>
+            <li>
+              <a href="../videos.html">Videos</a>
+            </li>
+            <li><a href="mailto:world.bindi@gmail.com">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
       <img src="${dashedTitle}_banner.jpg" class="banner" />`;
     const htmlFooter = `</body></html>`;
     const fullMarkdown = convertMarkdownToHtml();
