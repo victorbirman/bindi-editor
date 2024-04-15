@@ -68,10 +68,19 @@ document.addEventListener("DOMContentLoaded", function () {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="canonical" href="https://bindi.world/contenido/${dashedTitle}.html" />
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <title>${titleInput.value}</title>
-
+    <link rel="canonical" href="https://www.bindi.world/contenido/${dashedTitle}.html">
+    <!-- Meta tags for social media sharing -->
+    <meta property="og:title" content="${titleInput.value}">
+    <meta property="og:description" content="${subtitleInput.value}">
+    <meta property="og:image" content="https://www.bindi.world/contenido/${dashedTitle}.jpg">
+    <meta property="og:url" content="https://bindi.world/contenido/${dashedTitle}.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${titleInput.value}">
+    <meta name="twitter:description" content="${subtitleInput.value}">
+    <meta name="twitter:image" content="https://www.bindi.world/contenido/${dashedTitle}.jpg">
+    <!-- End of meta tags for social media sharing -->
     <link rel="stylesheet" href="style-articles.css" />
     <link rel="stylesheet" href="../style-hamburger.css" />
 
@@ -79,22 +88,26 @@ document.addEventListener("DOMContentLoaded", function () {
     <script src="scriptArticles.js" defer></script>
   </head>
   <body>
-    <nav>
-      <a href="../index.html"
-        ><img class="logo" src="../icons/bindi_logo.png" alt="Bindi"
-      /></a>
-      <ul class="top-menu">
-        <li>
-          <a href="../contenido/quienes-somos.html">Qui&eacute;nes somos</a>
-        </li>
-        <li>
-          <a href="../noticias.html">Noticias</a>
-        </li>
-        <li>
-          <a href="../videos.html">Videos</a>
-        </li>
-        <li><a href="mailto:world.bindi@gmail.com">Contacto</a></li>
-      </ul>
+  <nav>
+    <img class="logo" src="../icons/bindi_logo.png" alt="Bindi" />
+    <ul class="top-menu">
+      <input type="text" class="search-input hidden" placeholder="Búsqueda" name="search">
+      <div class="search-results hidden"></div>
+      <li class="hideable"><a href="contenido/quienes-somos.html">Qui&eacute;nes somos</a></li>
+
+      
+      <li class="hideable"><a href="noticias.html">Noticias</a></li>
+
+      <li class="hideable"><a href="videos.html">Videos</a></li >
+
+      <li class="hideable"><a href="mailto:world.bindi@gmail.com">Contacto</a></li>
+
+
+
+        <div class="magnifier"> <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5C7.23858 5 5 7.23858 5 10C5 12.7614 7.23858 15 10 15C11.381 15 12.6296 14.4415 13.5355 13.5355C14.4415 12.6296 15 11.381 15 10C15 7.23858 12.7614 5 10 5ZM3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 11.5719 16.481 13.0239 15.6063 14.1921L20.7071 19.2929C21.0976 19.6834 21.0976 20.3166 20.7071 20.7071C20.3166 21.0976 19.6834 21.0976 19.2929 20.7071L14.1921 15.6063C13.0239 16.481 11.5719 17 10 17C6.13401 17 3 13.866 3 10Z" fill="#000000"/>
+          </svg></div>
+    </ul>
       <button class="radio">&#9654; EN VIVO</button>
       <div class="hamburger" onclick="toggleHamburgerMenu()">
         <div class="line"></div>
@@ -155,3 +168,21 @@ document.addEventListener("DOMContentLoaded", function () {
     aJson.click();
   });
 });
+
+/* <body>
+<nav>
+  <a href="../index.html"
+    ><img class="logo" src="../icons/bindi_logo.png" alt="Bindi"
+  /></a>
+  <ul class="top-menu">
+    <li>
+      <a href="../contenido/quienes-somos.html">Qui&eacute;nes somos</a>
+    </li>
+    <li>
+      <a href="../noticias.html">Noticias</a>
+    </li>
+    <li>
+      <a href="../videos.html">Videos</a>
+    </li>
+    <li><a href="mailto:world.bindi@gmail.com">Contacto</a></li>
+  </ul> */
