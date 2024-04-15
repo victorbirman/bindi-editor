@@ -89,7 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
   </head>
   <body>
   <nav>
-    <img class="logo" src="../icons/bindi_logo.png" alt="Bindi" />
+  <a href="../index.html"
+  ><img class="logo" src="../icons/bindi_logo.png" alt="Bindi"
+/></a>
     <ul class="top-menu">
       <input type="text" class="search-input hidden" placeholder="Búsqueda" name="search">
       <div class="search-results hidden"></div>
