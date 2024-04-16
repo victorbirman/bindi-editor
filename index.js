@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <title>${titleInput.value}</title>
+    <meta name="description" content=${subtitleInput.value}>
     <link rel="canonical" href="https://www.bindi.world/contenido/${dashedTitle}.html">
     <!-- Meta tags for social media sharing -->
     <meta property="og:title" content="${titleInput.value}">
@@ -132,6 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </nav>
       <img src="${dashedTitle}_banner.jpg" class="banner" />`;
+    const recomendados = `<div class="recomendados"></div>`;
     const htmlFooter = `</body></html>`;
     const fullMarkdown = convertMarkdownToHtml();
 
@@ -142,6 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
         /<imagen([^>]*)>/g,
         `<img class="ilustracion" src="${dashedTitle}_ilustracion.jpg" $1>`
       ) +
+      recomendados +
       htmlFooter;
 
     const blob = new Blob([processedMarkdown], { type: "text/html" });
