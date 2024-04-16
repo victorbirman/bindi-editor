@@ -96,12 +96,12 @@ document.addEventListener("DOMContentLoaded", function () {
     <ul class="top-menu">
       <input type="text" class="search-input hidden" placeholder="Búsqueda" name="search">
       <div class="search-results hidden"></div>
-      <li class="hideable"><a href="contenido/quienes-somos.html">Qui&eacute;nes somos</a></li>
+      <li class="hideable"><a href="../contenido/quienes-somos.html">Qui&eacute;nes somos</a></li>
 
       
-      <li class="hideable"><a href="noticias.html">Noticias</a></li>
+      <li class="hideable"><a href="../noticias.html">Noticias</a></li>
 
-      <li class="hideable"><a href="videos.html">Videos</a></li >
+      <li class="hideable"><a href="../videos.html">Videos</a></li >
 
       <li class="hideable"><a href="mailto:world.bindi@gmail.com">Contacto</a></li>
 
