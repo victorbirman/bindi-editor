@@ -71,16 +71,16 @@ document.addEventListener("DOMContentLoaded", function () {
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <title>${titleInput.value}</title>
     <meta name="description" content=${subtitleInput.value}>
-    <link rel="canonical" href="https://www.bindi.world/contenido/${dashedTitle}.html">
+    <link rel="canonical" href="https://bindi.world/contenido/${dashedTitle}.html">
     <!-- Meta tags for social media sharing -->
     <meta property="og:title" content="${titleInput.value}">
     <meta property="og:description" content="${subtitleInput.value}">
-    <meta property="og:image" content="https://www.bindi.world/contenido/${dashedTitle}.jpg">
+    <meta property="og:image" content="https://bindi.world/contenido/${dashedTitle}.jpg">
     <meta property="og:url" content="https://bindi.world/contenido/${dashedTitle}.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${titleInput.value}">
     <meta name="twitter:description" content="${subtitleInput.value}">
-    <meta name="twitter:image" content="https://www.bindi.world/contenido/${dashedTitle}.jpg">
+    <meta name="twitter:image" content="https://bindi.world/contenido/${dashedTitle}.jpg">
     <!-- End of meta tags for social media sharing -->
     <link rel="stylesheet" href="style-articles.css" />
     <link rel="stylesheet" href="../style-hamburger.css" />
