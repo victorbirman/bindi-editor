@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <meta name="description" content=${subtitleInput.value}>
     <link rel="canonical" href="https://bindi.world/contenido/${dashedTitle}.html">
     <!-- Meta tags for social media sharing -->
+    <meta property="og:type" content="website">
     <meta property="og:title" content="${titleInput.value}">
     <meta property="og:description" content="${subtitleInput.value}">
     <meta property="og:image" content="https://bindi.world/contenido/${dashedTitle}.jpg">
@@ -132,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
     </nav>
-      <img src="${dashedTitle}_banner.jpg" class="banner" />`;
+      <img src="${dashedTitle}_banner.jpg" class="banner" alt="${titleInput.value}"/>`;
     const recomendados = `<div class="recomendados"></div>`;
     const htmlFooter = `</body></html>`;
     const fullMarkdown = convertMarkdownToHtml();
@@ -142,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
       htmlHeader +
       fullMarkdown.replace(
         /<imagen([^>]*)>/g,
-        `<img class="ilustracion" src="${dashedTitle}_ilustracion.jpg" $1>`
+        `<img class="ilustracion" src="${dashedTitle}_ilustracion.jpg" alt="${titleInput.value}" $1>`
       ) +
       recomendados +
       htmlFooter;
