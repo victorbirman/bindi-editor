@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <title>${titleInput.value}</title>
-    <meta name="description" content=${subtitleInput.value}>
+    <meta name="description" content="${subtitleInput.value}">
     <link rel="canonical" href="https://bindi.world/contenido/${dashedTitle}.html">
     <!-- Meta tags for social media sharing -->
     <meta property="og:type" content="website">
